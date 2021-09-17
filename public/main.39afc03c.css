@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+body {
+  font-family: "Ropa Sans", sans-serif;
+}
+
+body {
+  background-color: #303841;
+}
+
+.calc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.calc__body {
+  display: flex;
+  height: 43.75rem;
+  width: 100%;
+  max-width: 31.25rem;
+  background-color: #3A4750;
+  border-radius: 1rem;
+  position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.calc__body__brand {
+  color: #EEEEEE;
+  font-size: 40px;
+  position: absolute;
+  top: -7.5%;
+  left: 15%;
+}
+.calc__body__hamburger > span {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 2.5rem;
+  background: #EEEEEE;
+  border-radius: 1rem;
+  left: 1%;
+  top: -6%;
+}
+.calc__body__hamburger > span:nth-child(1) {
+  top: -4.5%;
+}
+.calc__body__hamburger > span:nth-child(2) {
+  top: -3%;
+}
+.calc__body__screen {
+  position: absolute;
+  font-size: 6.25rem;
+  color: #EEEEEE;
+  right: 5%;
+  top: 5%;
+}
+.calc__body__keypad {
+  background: #22252D;
+  width: 100%;
+  height: 31.25rem;
+  border-radius: 1rem;
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 0.6rem;
+  padding: 1.65rem;
+  font-size: 2.5rem;
+}
+.calc__body__keypad__button {
+  color: #EEEEEE;
+  background: #303841;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.calc__body__keypad__button--doubleCol {
+  background: #303841;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/span 2;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #EEEEEE;
+  border-radius: 1rem;
+}
+.calc__body__keypad__button--doubleRow {
+  background: #303841;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 4/span 1;
+  grid-row: 4/span 2;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #EEEEEE;
+  border-radius: 1rem;
+}
+.calc__body__keypad__button--blue {
+  color: #00ADB5;
+}
+
+/*# sourceMappingURL=/main.39afc03c.css.map */

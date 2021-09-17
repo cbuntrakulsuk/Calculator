@@ -1,0 +1,17 @@
+{
+  "name": "Calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel sass/index.html -d public",
+    "build": "parcel build sass/index.html -d public --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.41.0"
+  }
+}
