@@ -31,6 +31,18 @@ body {
   top: -7.5%;
   left: 15%;
 }
+.calc__body__hamburger {
+  cursor: pointer;
+}
+.calc__body__hamburger::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  z-index: 999;
+  position: absolute;
+  top: -7.5%;
+}
 .calc__body__hamburger > span {
   position: absolute;
   display: block;
@@ -52,7 +64,7 @@ body {
   font-size: 6.25rem;
   color: #EEEEEE;
   right: 5%;
-  top: 5%;
+  top: 3%;
 }
 .calc__body__keypad {
   background: #22252D;
@@ -65,9 +77,10 @@ body {
   grid-template-rows: auto auto auto auto;
   grid-gap: 0.6rem;
   padding: 1.65rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .calc__body__keypad__button {
+  cursor: pointer;
   color: #EEEEEE;
   background: #303841;
   border-radius: 1rem;
@@ -75,6 +88,11 @@ body {
   justify-content: center;
   align-items: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.calc__body__keypad__button:hover {
+  background: #3A4750;
+  transition: ease-in-out;
+  transition-duration: 200ms;
 }
 .calc__body__keypad__button--doubleCol {
   background: #303841;

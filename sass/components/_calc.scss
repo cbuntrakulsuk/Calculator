@@ -28,6 +28,17 @@
         
         &__hamburger {
 
+            &::before{
+                content: "";
+                height: 50px;
+                width: 50px;
+                background: transparent;
+                z-index: 999;
+                position: absolute;
+                top: -7.5%;
+            }
+            
+            cursor: pointer;
             > span {
                 position: absolute;
                 display: block;
@@ -52,7 +63,7 @@
             font-size: 6.25rem;
             color:a.$primary-font-color;
             right: 5%;
-            top: 5%;
+            top: 3%;
         }
 
         &__keypad {
@@ -66,9 +77,10 @@
             grid-template-rows: auto auto auto auto;
             grid-gap: 0.60rem;
             padding: 1.65rem;
-            font-size: 2.5rem;
+            font-size: 3rem;
 
             &__button{
+                cursor: pointer;
                 color:a.$primary-font-color;
                 background: a.$primary-color;
                 border-radius: 1rem;
@@ -77,6 +89,11 @@
                 align-items: center;
                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
+                &:hover {
+                    background: a.$secondary-color;
+                    transition:ease-in-out;
+                    transition-duration: 200ms;
+                }
 
                 &--doubleCol{
                     background: a.$primary-color;
