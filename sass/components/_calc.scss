@@ -1,14 +1,15 @@
 @use '../abstracts' as a;
 
-.calc {
+.main {
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
 
+    .calc {
 
-    &__body {
         display: flex;
         height: 43.75rem;
         width: 100%;
@@ -18,16 +19,8 @@
         position: relative;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-        &__brand {
-            color: a.$primary-font-color;
-            font-size: 40px;
-            position: absolute;
-            top: -7.5%;
-            left: 15%;
-        }
-        
         &__hamburger {
-
+            cursor: pointer;
             &::before{
                 content: "";
                 height: 50px;
@@ -37,8 +30,6 @@
                 position: absolute;
                 top: -7.5%;
             }
-            
-            cursor: pointer;
             > span {
                 position: absolute;
                 display: block;
@@ -58,6 +49,14 @@
             }
         }
 
+        &__brand {
+            color: a.$primary-font-color;
+            font-size: 40px;
+            position: absolute;
+            top: -7.5%;
+            left: 15%;
+        }
+
         &__screen {
             position: absolute;
             font-size: 6.25rem;
@@ -65,7 +64,7 @@
             right: 5%;
             top: 3%;
         }
-
+    
         &__keypad {
             background: a.$dark-grey;
             width: 100%;
@@ -78,55 +77,50 @@
             grid-gap: 0.60rem;
             padding: 1.65rem;
             font-size: 3rem;
+        }
 
-            &__button{
-                cursor: pointer;
-                color:a.$primary-font-color;
+        &__button {
+            cursor: pointer;
+            color:a.$primary-font-color;
+            background: a.$primary-color;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            &:hover {
+                background: a.$secondary-color;
+                transition:ease-in-out;
+                transition-duration: 200ms;
+            }
+
+            &--doubleCol{
                 background: a.$primary-color;
-                border-radius: 1rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                grid-column: 1 / span 2;
                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                color:a.$primary-font-color;
+                border-radius: 1rem;
+            }
 
-                &:hover {
-                    background: a.$secondary-color;
-                    transition:ease-in-out;
-                    transition-duration: 200ms;
-                }
+            &--doubleRow{
+                background: a.$primary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-column: 4 / span 1;
+                grid-row: 4 / span 2;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                color:a.$primary-font-color;
+                border-radius: 1rem;
+            }
 
-                &--doubleCol{
-                    background: a.$primary-color;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    grid-column: 1 / span 2;
-                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                    color:a.$primary-font-color;
-                    border-radius: 1rem;
-                }
-
-                &--doubleRow{
-                    background: a.$primary-color;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    grid-column: 4 / span 1;
-                    grid-row: 4 / span 2;
-                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                    color:a.$primary-font-color;
-                    border-radius: 1rem;
-                }
-
-                &--blue {
-                    color: a.$secondary-font-color;
-                }
-
-
+            &--blue {
+                color: a.$secondary-font-color;
             }
         }
-
-
-    }
-
-}
+    } 
+} 

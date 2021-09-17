@@ -7,14 +7,14 @@ body {
   background-color: #303841;
 }
 
-.calc {
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
 }
-.calc__body {
+.main .calc {
   display: flex;
   height: 43.75rem;
   width: 100%;
@@ -24,17 +24,10 @@ body {
   position: relative;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.calc__body__brand {
-  color: #EEEEEE;
-  font-size: 40px;
-  position: absolute;
-  top: -7.5%;
-  left: 15%;
-}
-.calc__body__hamburger {
+.main .calc__hamburger {
   cursor: pointer;
 }
-.calc__body__hamburger::before {
+.main .calc__hamburger::before {
   content: "";
   height: 50px;
   width: 50px;
@@ -43,7 +36,7 @@ body {
   position: absolute;
   top: -7.5%;
 }
-.calc__body__hamburger > span {
+.main .calc__hamburger > span {
   position: absolute;
   display: block;
   height: 4px;
@@ -53,20 +46,27 @@ body {
   left: 1%;
   top: -6%;
 }
-.calc__body__hamburger > span:nth-child(1) {
+.main .calc__hamburger > span:nth-child(1) {
   top: -4.5%;
 }
-.calc__body__hamburger > span:nth-child(2) {
+.main .calc__hamburger > span:nth-child(2) {
   top: -3%;
 }
-.calc__body__screen {
+.main .calc__brand {
+  color: #EEEEEE;
+  font-size: 40px;
+  position: absolute;
+  top: -7.5%;
+  left: 15%;
+}
+.main .calc__screen {
   position: absolute;
   font-size: 6.25rem;
   color: #EEEEEE;
   right: 5%;
   top: 3%;
 }
-.calc__body__keypad {
+.main .calc__keypad {
   background: #22252D;
   width: 100%;
   height: 31.25rem;
@@ -79,7 +79,7 @@ body {
   padding: 1.65rem;
   font-size: 3rem;
 }
-.calc__body__keypad__button {
+.main .calc__button {
   cursor: pointer;
   color: #EEEEEE;
   background: #303841;
@@ -89,12 +89,12 @@ body {
   align-items: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.calc__body__keypad__button:hover {
+.main .calc__button:hover {
   background: #3A4750;
   transition: ease-in-out;
   transition-duration: 200ms;
 }
-.calc__body__keypad__button--doubleCol {
+.main .calc__button--doubleCol {
   background: #303841;
   display: flex;
   justify-content: center;
@@ -104,7 +104,7 @@ body {
   color: #EEEEEE;
   border-radius: 1rem;
 }
-.calc__body__keypad__button--doubleRow {
+.main .calc__button--doubleRow {
   background: #303841;
   display: flex;
   justify-content: center;
@@ -115,7 +115,7 @@ body {
   color: #EEEEEE;
   border-radius: 1rem;
 }
-.calc__body__keypad__button--blue {
+.main .calc__button--blue {
   color: #00ADB5;
 }
 
