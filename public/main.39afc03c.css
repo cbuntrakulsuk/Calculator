@@ -65,6 +65,11 @@ body {
   color: #EEEEEE;
   right: 5%;
   top: 3%;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  white-space: nowrap;
 }
 .main .calc__keypad {
   background: #22252D;

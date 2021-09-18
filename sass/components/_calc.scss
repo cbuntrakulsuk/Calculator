@@ -63,6 +63,11 @@
             color:a.$primary-font-color;
             right: 5%;
             top: 3%;
+            max-width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: right;
+            white-space: nowrap;
         }
     
         &__keypad {
