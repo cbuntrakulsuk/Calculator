@@ -119,8 +119,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
 //variables
-var num1;
-var num2;
+var num1 = 0;
+var num2 = 0;
+var result = 0;
 var operation; //Selectors
 
 var button = document.querySelectorAll('.calc__button');
@@ -158,24 +159,30 @@ function calculate() {
 
   switch (operation) {
     case '+':
-      addNums(num1, num2);
+      result = addNums(num1, num2);
       break;
 
-    case y:
-      // code block
+    case '-':
+      result = subNums(num1, num2);
       break;
 
-    default: // code block
+    case 'x':
+      result = multiplyNums(num1, num2);
+      break;
 
+    case '/':
+      result = divideNums(num1, num2);
+      break;
   }
 
-  screen.innerHTML = addNums(num1, num2);
+  screen.innerHTML = result;
 }
 
 function clearAll() {
   screen.innerHTML = "";
   num1 = 0;
   num2 = 0;
+  result = 0;
 }
 
 function delLastNum() {
@@ -186,6 +193,24 @@ function addNums(num1, num2) {
   num1 = parseInt(num1, 10);
   num2 = parseInt(num2, 10);
   return num1 + num2;
+}
+
+function subNums(num1, num2) {
+  num1 = parseInt(num1, 10);
+  num2 = parseInt(num2, 10);
+  return num1 - num2;
+}
+
+function multiplyNums(num1, num2) {
+  num1 = parseInt(num1, 10);
+  num2 = parseInt(num2, 10);
+  return num1 * num2;
+}
+
+function divideNums(num1, num2) {
+  num1 = parseInt(num1, 10);
+  num2 = parseInt(num2, 10);
+  return num1 / num2;
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

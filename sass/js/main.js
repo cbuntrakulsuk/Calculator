@@ -1,7 +1,8 @@
 
 //variables
-let num1;
-let num2;
+let num1 = 0;
+let num2 = 0;
+let result = 0;
 let operation;
 
 //Selectors
@@ -38,21 +39,26 @@ function calculate() {
 
     switch(operation) {
         case '+':
-            addNums(num1,num2);
+            result = addNums(num1,num2);
             break;
-        case y:
-          // code block
-          break;
-        default:
-          // code block
+        case '-':
+            result = subNums(num1,num2);
+            break;
+        case 'x':
+            result = multiplyNums(num1,num2);
+            break;
+        case '/':
+            result = divideNums(num1,num2);
+            break;
       }
-    screen.innerHTML = addNums(num1,num2);  
+    screen.innerHTML = result;  
 }
 
 function clearAll() {
     screen.innerHTML = "";
     num1 = 0;
     num2 = 0;
+    result = 0;
 }
 
 function delLastNum() {
@@ -65,3 +71,20 @@ function addNums(num1, num2) {
     return num1 + num2;
 }
 
+function subNums(num1, num2) {
+    num1 = parseInt(num1,10);
+    num2 = parseInt(num2,10);
+    return num1 - num2;
+}
+
+function multiplyNums(num1, num2) {
+    num1 = parseInt(num1,10);
+    num2 = parseInt(num2,10);
+    return num1 * num2;
+}
+
+function divideNums(num1, num2) {
+    num1 = parseInt(num1,10);
+    num2 = parseInt(num2,10);
+    return num1 / num2;
+}
