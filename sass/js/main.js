@@ -66,25 +66,26 @@ function delLastNum() {
 }
 
 function addNums(num1, num2) {
-    num1 = parseInt(num1,10);
-    num2 = parseInt(num2,10);
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+
     return num1 + num2;
 }
 
 function subNums(num1, num2) {
-    num1 = parseInt(num1,10);
-    num2 = parseInt(num2,10);
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
     return num1 - num2;
 }
 
 function multiplyNums(num1, num2) {
-    num1 = parseInt(num1,10);
-    num2 = parseInt(num2,10);
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
     return num1 * num2;
 }
 
 function divideNums(num1, num2) {
-    num1 = parseInt(num1,10);
-    num2 = parseInt(num2,10);
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
     return num1 / num2;
 }

@@ -190,26 +190,26 @@ function delLastNum() {
 }
 
 function addNums(num1, num2) {
-  num1 = parseInt(num1, 10);
-  num2 = parseInt(num2, 10);
+  num1 = parseFloat(num1);
+  num2 = parseFloat(num2);
   return num1 + num2;
 }
 
 function subNums(num1, num2) {
-  num1 = parseInt(num1, 10);
-  num2 = parseInt(num2, 10);
+  num1 = parseFloat(num1);
+  num2 = parseFloat(num2);
   return num1 - num2;
 }
 
 function multiplyNums(num1, num2) {
-  num1 = parseInt(num1, 10);
-  num2 = parseInt(num2, 10);
+  num1 = parseFloat(num1);
+  num2 = parseFloat(num2);
   return num1 * num2;
 }
 
 function divideNums(num1, num2) {
-  num1 = parseInt(num1, 10);
-  num2 = parseInt(num2, 10);
+  num1 = parseFloat(num1);
+  num2 = parseFloat(num2);
   return num1 / num2;
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -240,7 +240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14144" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14137" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
