@@ -12,6 +12,7 @@ const clear = document.querySelector('#clear');
 const del = document.querySelector('#del');
 const operator = document.querySelectorAll('.operator');
 const equals = document.querySelector('#equals');
+const subScreen = document.querySelector('.calc__subScreen');
 
 //Event Listeners
 button.forEach(button => button.addEventListener('click', displayOnScreen));
@@ -48,11 +49,15 @@ function getFirstNum(e){
     else{
         operation = 0;
     }
+
+    subScreen.innerHTML = num1+ operation;
+    
 }
 
 function calculate() {
     num2 = screen.innerHTML;
     screen.innerHTML = "";
+    subScreen.innerHTML += num2+' =';
 
     switch(operation) {
         case '+':
@@ -75,6 +80,7 @@ function calculate() {
 
 function clearAll() {
     screen.innerHTML = "";
+    subScreen.innerHTML = "";
     num1 = 0;
     num2 = 0;
     result = 0;

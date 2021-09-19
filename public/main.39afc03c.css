@@ -60,10 +60,11 @@ body {
   left: 15%;
 }
 .main .calc__subScreen {
-  color: #EEEEEE;
+  color: #00ADB5;
   font-size: 3rem;
   position: absolute;
-  right: 0;
+  left: 5%;
+  top: 7%;
 }
 .main .calc__screen {
   position: absolute;

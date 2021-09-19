@@ -129,7 +129,8 @@ var screen = document.querySelector('.calc__screen');
 var clear = document.querySelector('#clear');
 var del = document.querySelector('#del');
 var operator = document.querySelectorAll('.operator');
-var equals = document.querySelector('#equals'); //Event Listeners
+var equals = document.querySelector('#equals');
+var subScreen = document.querySelector('.calc__subScreen'); //Event Listeners
 
 button.forEach(function (button) {
   return button.addEventListener('click', displayOnScreen);
@@ -162,11 +163,14 @@ function getFirstNum(e) {
   } else {
     operation = 0;
   }
+
+  subScreen.innerHTML = num1 + operation;
 }
 
 function calculate() {
   num2 = screen.innerHTML;
   screen.innerHTML = "";
+  subScreen.innerHTML += num2 + ' =';
 
   switch (operation) {
     case '+':
@@ -192,6 +196,7 @@ function calculate() {
 
 function clearAll() {
   screen.innerHTML = "";
+  subScreen.innerHTML = "";
   num1 = 0;
   num2 = 0;
   result = 0;
