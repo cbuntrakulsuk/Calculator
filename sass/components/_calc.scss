@@ -57,6 +57,13 @@
             left: 15%;
         }
 
+        &__subScreen {
+            color:a.$primary-font-color;
+            font-size: 3rem;
+            position: absolute;
+            right: 0;
+        }
+
         &__screen {
             position: absolute;
             font-size: 6.25rem;
@@ -125,7 +132,13 @@
 
             &--blue {
                 color: a.$secondary-font-color;
+                font-size: 40px;
             }
         }
     } 
+    
+    #clear {
+        font-size: 45px;
+    }
+
 } 

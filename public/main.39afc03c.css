@@ -59,6 +59,12 @@ body {
   top: -7.5%;
   left: 15%;
 }
+.main .calc__subScreen {
+  color: #EEEEEE;
+  font-size: 3rem;
+  position: absolute;
+  right: 0;
+}
 .main .calc__screen {
   position: absolute;
   font-size: 6.25rem;
@@ -122,6 +128,10 @@ body {
 }
 .main .calc__button--blue {
   color: #00ADB5;
+  font-size: 40px;
+}
+.main #clear {
+  font-size: 45px;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

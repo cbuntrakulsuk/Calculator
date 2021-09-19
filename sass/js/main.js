@@ -28,13 +28,30 @@ function displayOnScreen(e) {
 }
 
 function getFirstNum(e){
-    num1 = screen.innerHTML.slice(0,-1);
+
+    num1 = screen.innerHTML;
     screen.innerHTML = "";
-    operation = e.target.innerHTML;
+
+    //get operation
+    if (e.target.classList.contains('fa-divide')) {
+        operation = '/';
+    }
+    else if (e.target.classList.contains('fa-plus')) {
+        operation = '+';
+    }
+    else if (e.target.classList.contains('fa-minus')) {
+        operation = '-';
+    }
+    else if (e.target.classList.contains('fa-times')) {
+        operation = 'x';
+    }
+    else{
+        operation = 0;
+    }
 }
 
 function calculate() {
-    num2 = screen.innerHTML.slice(0,-1);
+    num2 = screen.innerHTML;
     screen.innerHTML = "";
 
     switch(operation) {
@@ -48,9 +65,11 @@ function calculate() {
             result = multiplyNums(num1,num2);
             break;
         case '/':
+            console.log('divide case')
             result = divideNums(num1,num2);
             break;
       }
+
     screen.innerHTML = result;  
 }
 
@@ -87,5 +106,8 @@ function multiplyNums(num1, num2) {
 function divideNums(num1, num2) {
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
+
+    console.log(num1);
+    console.log(num2);
     return num1 / num2;
 }

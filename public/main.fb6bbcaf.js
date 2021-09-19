@@ -148,13 +148,24 @@ function displayOnScreen(e) {
 }
 
 function getFirstNum(e) {
-  num1 = screen.innerHTML.slice(0, -1);
-  screen.innerHTML = "";
-  operation = e.target.innerHTML;
+  num1 = screen.innerHTML;
+  screen.innerHTML = ""; //get operation
+
+  if (e.target.classList.contains('fa-divide')) {
+    operation = '/';
+  } else if (e.target.classList.contains('fa-plus')) {
+    operation = '+';
+  } else if (e.target.classList.contains('fa-minus')) {
+    operation = '-';
+  } else if (e.target.classList.contains('fa-times')) {
+    operation = 'x';
+  } else {
+    operation = 0;
+  }
 }
 
 function calculate() {
-  num2 = screen.innerHTML.slice(0, -1);
+  num2 = screen.innerHTML;
   screen.innerHTML = "";
 
   switch (operation) {
@@ -171,6 +182,7 @@ function calculate() {
       break;
 
     case '/':
+      console.log('divide case');
       result = divideNums(num1, num2);
       break;
   }
@@ -210,6 +222,8 @@ function multiplyNums(num1, num2) {
 function divideNums(num1, num2) {
   num1 = parseFloat(num1);
   num2 = parseFloat(num2);
+  console.log(num1);
+  console.log(num2);
   return num1 / num2;
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -240,7 +254,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14137" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "9404" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
